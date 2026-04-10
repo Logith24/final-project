@@ -39,8 +39,10 @@ The workflow patches `frontend/package.json` `homepage` during the build so asse
 2. On [Render](https://render.com): **New → Web Service**, connect this repo.
 3. Settings:
    - **Root Directory:** `backend`
-   - **Build Command:** `npm install`
+   - **Build Command:** `npm install` (do **not** use `npm build` — that is not a valid npm command)
    - **Start Command:** `npm start`
+
+   If you prefer a single convention, you can set **Build Command** to `npm run build` instead; the backend defines `build` to run `npm install`.
 4. **Environment variables** (Dashboard → Environment):
 
 | Key | Example |
