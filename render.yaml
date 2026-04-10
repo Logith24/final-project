@@ -1,0 +1,17 @@
+# Render Blueprint (optional): connect repo in Render → New Blueprint → select this file
+# Set MONGODB_URI and FRONTEND_URL in the Render dashboard (mark as secret).
+
+services:
+  - type: web
+    name: book-library-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
