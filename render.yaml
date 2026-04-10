@@ -1,4 +1,7 @@
-# Render Blueprint (optional): connect repo in Render → New Blueprint → select this file
+# Render Blueprint (optional): New → Blueprint → connect repo → select this file.
+# IMPORTANT: If you created the service manually, the Build Command in the UI
+# must NOT be "npm build" (invalid). Use: npm install   OR   npm run build
+#
 # Set MONGODB_URI and FRONTEND_URL in the Render dashboard (mark as secret).
 
 services:
